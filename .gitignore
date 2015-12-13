@@ -7,6 +7,9 @@
 # Ignore bundler config
 /.bundle
 
+# Ignore the build directory
+/public
+
 /node_modules
 .publish
 

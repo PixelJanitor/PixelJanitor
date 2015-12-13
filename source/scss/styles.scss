@@ -1,0 +1,75 @@
+@import "bourbon";
+
+@font-face {
+  font-family: 'Gotham-ExtraLight';
+  src: url('../fonts/Gotham-ExtraLight.eot?#iefix') format('embedded-opentype'),  url('../fonts/Gotham-ExtraLight.otf')  format('opentype'),
+	     url('../fonts/Gotham-ExtraLight.woff') format('woff'), url('../fonts/Gotham-ExtraLight.ttf')  format('truetype'), url('../fonts/Gotham-ExtraLight.svg#Gotham-ExtraLight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+$dark: #515151;
+
+body {
+  font-family: 'Gotham-ExtraLight';
+  -webkit-font-smoothing: antialiased;
+  color: $dark;
+}
+
+.logo {
+  @include centerer;
+  text-transform: uppercase;
+  letter-spacing: 20px;
+  font-size: 36px;
+  margin: 0;
+  animation: title-fade 2s;
+  @at-root {
+    @keyframes title-fade {
+      0% {
+        opacity: 0;
+        transform: translate3d(-50%, -100%, 0);
+      }
+    }
+  }
+}
+
+.pixel-flower {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 500px;
+  overflow: hidden;
+}
+
+.pixel-flower-petal {
+  @include size(1000px);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  background-color: $dark;
+  opacity: .05;
+  transform-origin: 50%;
+  animation: blossom 2s;
+  @at-root {
+    @keyframes blossom {
+      0% {
+        opacity: 0;
+        transform: translate3d(-50%, 25%, 0) rotate(45deg);
+      }
+    }
+  }
+
+  @for $i from 1 through 8 {
+    &:nth-child(#{$i}) {
+      transform: translate3d(-50%, 0, 0) rotate($i * 10deg);
+    }
+  }
+}

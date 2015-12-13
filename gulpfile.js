@@ -60,5 +60,7 @@ gulp.task('watch', function() {
 
 gulp.task('deploy', function() {
   return gulp.src('./public/**/*')
-    .pipe(ghPages({ branch: "master" }));
+    .pipe(ghPages({
+      message: "Depolyed: [timestamp]"
+    }));
 });

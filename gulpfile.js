@@ -59,8 +59,8 @@ gulp.task('watch', function() {
 });
 
 gulp.task('deploy', function() {
-  return gulp.src('./public/**/*')
+  return gulp.src(['./public/**/*', 'source/CNAME'])
     .pipe(ghPages({
-      message: "Depolyed: [timestamp]"
+      message: 'deploy'
     }));
 });

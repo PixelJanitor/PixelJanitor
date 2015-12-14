@@ -14,7 +14,7 @@ var gulp  = require('gulp'),
     ghPages = require('gulp-gh-pages');
 
 // define the default task and add the watch task to it
-gulp.task('default', ['jade', 'sass', 'scripts', 'watch']);
+gulp.task('default', ['jade', 'sass', 'scripts', 'fonts', 'watch']);
 
 gulp.task('jade', function() {
   gulp.src('source/*.jade')
@@ -51,6 +51,11 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('public/javascript'));
 });
 
+gulp.task('fonts', function() {
+  return gulp.src('source/fonts/**/*')
+    .pipe(gulp.dest('public/fonts'));
+});
+
 // configure which files to watch and what tasks to use on file changes
 gulp.task('watch', function() {
   gulp.watch('source/*.jade', ['jade']);
@@ -59,7 +64,7 @@ gulp.task('watch', function() {
 });
 
 gulp.task('deploy', function() {
-  return gulp.src(['./public/**/*', 'source/CNAME'])
+  return gulp.src(['./public/**/*', 'source/fonts/**/*','source/CNAME'])
     .pipe(ghPages({
       message: 'deploy'
     }));

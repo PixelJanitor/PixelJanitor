@@ -49,11 +49,14 @@ body {
   opacity: .5;
   transition-property: opacity;
   transition-duration: $duration*4;
-  transform: scale(.75);
 
   &:hover {
     transition-duration: $duration;
     opacity: 1;
+  }
+
+  @media screen and (max-width: 1800px) {
+    transform: scale(.75);
   }
 }
 

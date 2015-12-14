@@ -29,6 +29,8 @@ body {
   letter-spacing: 20px;
   font-size: 36px;
   margin: 0;
+  z-index: 2;
+
   animation: title-fade 2s;
   @at-root {
     @keyframes title-fade {
@@ -47,6 +49,7 @@ body {
   right: 0;
   height: 500px;
   overflow: hidden;
+  z-index: 1;
 }
 
 .pixel-flower-petal {

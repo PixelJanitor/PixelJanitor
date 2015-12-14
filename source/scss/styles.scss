@@ -9,22 +9,52 @@
 }
 
 $dark: #515151;
+$duration: 250ms;
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   font-family: 'Gotham-ExtraLight';
   -webkit-font-smoothing: antialiased;
   color: $dark;
+  height: 100%;
+  width: 100%;
 }
 
 .primary-nav {
-  width: 100%;
+  width: 75%;
+  max-width: 300px;
+  margin: 20px auto 0;
   display: table;
-  border-spacing: 50px;
+
+  animation: primary-nav-fade $duration*16;
+  @at-root {
+    @keyframes primary-nav-fade {
+      0%, 25% {
+        opacity: 0;
+        transform: translate3d(0%, -25%, 0);
+      }
+      50% {
+        transform: translate3d(0%, 5%, 0);
+      }
+    }
+  }
 }
 
 .primary-nav-item {
   display: table-cell;
   text-align: center;
+  opacity: .5;
+  transition-property: opacity;
+  transition-duration: $duration*4;
+  transform: scale(.75);
+
+  &:hover {
+    transition-duration: $duration;
+    opacity: 1;
+  }
 }
 
 .logo {
@@ -39,8 +69,9 @@ body {
   margin: 0;
   z-index: 2;
   line-height: 1;
+  padding-left: 16px;
 
-  animation: title-fade 2s;
+  animation: title-fade $duration*8;
   @at-root {
     @keyframes title-fade {
       0% {
@@ -48,6 +79,16 @@ body {
         transform: translate3d(0%, -100%, 0);
       }
     }
+  }
+
+  @media screen and (max-width: 600px) {
+    letter-spacing: 14px;
+    font-size: 24px;
+  }
+
+  @media screen and (max-width: 375px) {
+    letter-spacing: 10px;
+    font-size: 18px;
   }
 }
 
@@ -71,7 +112,7 @@ body {
   transform-origin: 50%;
   backface-visibility: hidden;
 
-  animation: blossom 2s;
+  animation: blossom $duration*8;
   @at-root {
     @keyframes blossom {
       0% {

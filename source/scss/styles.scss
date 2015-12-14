@@ -23,6 +23,17 @@ body {
   color: $dark;
 }
 
+.primary-nav {
+  width: 100%;
+  display: table;
+  border-spacing: 50px;
+}
+
+.primary-nav-item {
+  display: table-cell;
+  text-align: center;
+}
+
 .logo {
   @include centerer;
   text-transform: uppercase;
@@ -58,7 +69,7 @@ body {
   top: 100%;
   left: 50%;
   background-color: $dark;
-  opacity: .05;
+  opacity: .1;
   transform-origin: 50%;
   animation: blossom 2s;
   @at-root {

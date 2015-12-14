@@ -8,13 +8,6 @@
   font-style: normal;
 }
 
-@mixin centerer {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate3d(-50%, -50%, 0);
-}
-
 $dark: #515151;
 
 body {
@@ -35,20 +28,24 @@ body {
 }
 
 .logo {
-  @include centerer;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translate3d(0%, -50%, 0);
   text-transform: uppercase;
   letter-spacing: 20px;
   font-size: 36px;
   margin: 0;
   z-index: 2;
+  line-height: 1;
 
-  animation-fill-mode: forwards;
   animation: title-fade 2s;
   @at-root {
     @keyframes title-fade {
       0% {
         opacity: 0;
-        transform: translate3d(-50%, -100%, 0);
+        transform: translate3d(0%, -100%, 0);
       }
     }
   }
@@ -72,6 +69,8 @@ body {
   background-color: $dark;
   opacity: .1;
   transform-origin: 50%;
+  backface-visibility: hidden;
+
   animation: blossom 2s;
   @at-root {
     @keyframes blossom {
@@ -80,6 +79,10 @@ body {
         transform: translate3d(-50%, 25%, 0) rotate(45deg);
       }
     }
+  }
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    opacity: .05;
   }
 
   @for $i from 1 through 8 {

@@ -3,22 +3,45 @@ html(lang="en")
   head
     title PixelJanitor
     meta(name="viewport" content="width=device-width, initial-scale=1")
-    script(type="text/javascript" src="javascript/scripts.js")
     link(rel="stylesheet" type="text/css" href="stylesheets/styles.css")
-  
-  body
-    nav.primary-nav
-      a.primary-nav-item(href="http://dribbble.com/pixeljanitor" target="_blank")
-        img(src="images/dribbble.svg")
-      a.primary-nav-item(href="http://github.com/pixeljanitor" target="_blank")
-        img(src="images/github.svg")
-    h1.logo PIXELJANITOR
-    .pixel-flower
-      .pixel-flower-petal
-      .pixel-flower-petal
-      .pixel-flower-petal
-      .pixel-flower-petal
-      .pixel-flower-petal
-      .pixel-flower-petal
-      .pixel-flower-petal
-      .pixel-flower-petal
+    script(type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")
+    script(type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js")
+    script(type="text/javascript" src="javascript/scripts.js")
+
+  body  
+        
+    header.primary-header
+      nav.primary-nav
+        a.primary-nav-item(href="http://dribbble.com/pixeljanitor" target="_blank")
+          img(src="images/dribbble.svg")
+        button.primary-nav-item.contact-form-show
+          img(src="images/email.svg")
+        a.primary-nav-item(href="http://github.com/pixeljanitor" target="_blank")
+          img(src="images/github.svg")
+    
+    section.hero-content
+      h1.logo PIXELJANITOR
+      .pixel-flower
+        .pixel-flower-petal
+        .pixel-flower-petal
+        .pixel-flower-petal
+        .pixel-flower-petal
+        .pixel-flower-petal
+        .pixel-flower-petal
+        .pixel-flower-petal
+        .pixel-flower-petal
+      section.contact
+        form#contact-form
+          .contact-form-name
+            label(for="contact-name") What's your Name
+            input(type="text" name="name" id="contact-name" required)
+          .contact-form-email
+            label(for="contact-email") Email address to reach you at?
+            input(type="email" name="email" id="contact-email" required)
+          .contact-form-message
+            label(for="contact-message") What's up?
+            textarea(name="message" id="contact-message" required)
+          .contact-form-submit
+            button.primary-button Send
+    
+    section.portfolio

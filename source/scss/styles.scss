@@ -24,6 +24,11 @@ body {
   width: 100%;
 }
 
+label, input, textarea {
+  font-family: 'Gotham-ExtraLight';
+  font-weight: normal;
+}
+
 .primary-nav {
   display: flex;
   flex-direction: row;
@@ -49,15 +54,19 @@ body {
   pointer-events: auto;
   transition-property: opacity;
   transition-duration: $duration*4;
-  animation: primary-nav-fade $duration*16;
+  animation: primary-nav-fade $duration*8;
   @at-root {
     @keyframes primary-nav-fade {
-      0%, 25% {
+      0%, 50% {
         opacity: 0;
-        transform: translate3d(0, -25%, 0);
+        transform: translate3d(0, -100%, 0);
       }
-      50% {
-        transform: translate3d(0, 5%, 0);
+      75% {
+        transform: translate3d(0, 25%, 0);
+      }
+      100% {
+        opacity: .5;
+        transform: translate3d(0, 0, 0);
       }
     }
   }
@@ -68,22 +77,7 @@ body {
   }
 
   &.is-slid-away {
-    transform: translate3d(0, -100%, 0);
-    opacity: 0;
-    pointer-events: none;
-    animation: primary-nav-contact $duration*4;
-    @at-root {
-      @keyframes primary-nav-contact {
-        0% {
-          opacity: 1;
-          transform: translate3d(0, 0, 0);
-        }
-        25% {
-          opacity: 1;
-          transform: translate3d(0, 5%, 0);
-        }
-      }
-    }
+    opacity: 1;
   }
 }
 
@@ -97,9 +91,9 @@ body {
 
 .logo {
   text-align: center;
+  font-weight: normal;
   text-transform: uppercase;
   letter-spacing: 20px;
-  font-weight:normal;
   font-size: 36px;
   margin: 0;
   z-index: 2;
@@ -171,7 +165,7 @@ body {
 
 .portfolio {
   background: $dark;
-  height: 400px;
+  height: 20px;
 }
 
 .contact {
@@ -201,7 +195,6 @@ body {
   width: 96%;
   max-width: 600px;
   margin: auto;
-  border: 1px solid rgba(#515151, .1);
   padding: 12px;
   position: relative;
   bottom: 40px;
@@ -216,15 +209,67 @@ body {
   }
 
   label {
+    font-size: 12px;
+    opacity: .5;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 12px;
+    left: 14px;
+    transition: opacity $duration;
   }
 
   input, textarea {
-    padding: 12px;
-    border: 1px solid rgba(#515151, .1);
+    padding: 32px 12px 12px;
+    border: 2px solid rgba($dark, .1);
     border-radius: 2px;
     width: 100% !important;
+    font-size: 18px;
+    transition: border $duration;
+
+    &:focus, &:valid {
+      outline: none;
+      border: 2px solid rgba($dark, 1);
+    }
+  }
+
+  textarea:focus + label {
+    opacity: 0
+  }
+}
+
+.contact-form-submit {
+  width: 100%;
+  padding: 12px;
+  color: white;
+  background: $dark;
+  transition: background $duration;
+  border-radius: 2px;
+  border: none;
+
+  &:focus {
+    outline: none;
+    border: none;
+  }
+
+  &.is-submitting {
+    animation: fade-out $duration*8;
+    @at-root {
+      @keyframes fade-out {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  &.has-submitted {
+    background: white;
+    color: $dark;
+  }
+
+  &.has-errored {
+    background: red;
   }
 }

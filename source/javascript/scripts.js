@@ -21,8 +21,8 @@ $(window).on('load resize', function() {
 });
 
 $(document).on('click', '.contact-form-show', function() {
-  $(this).addClass('is-slid-away');
-  $('.contact').addClass('is-visible');
+  $(this).toggleClass('is-slid-away');
+  $('.contact').toggleClass('is-visible');
 });
 
 $(document).ready(function() {
@@ -37,6 +37,8 @@ $(document).ready(function() {
     e.preventDefault();
 
 		console.log("Handling the submit");
+
+    $('.contact-form-submit').addClass('is-submitting');
 		//add error handling here
 		//gather the form data
 
@@ -49,11 +51,16 @@ $(document).ready(function() {
 		comment.save(data, {
 			success:function() {
 				console.log("Success");
-				//Alerts are lame - but quick and easy
-				alert("Thanks for filling the form!");
+        $('.contact-form-submit').removeClass('is-submitting');
+        $('.contact-form-submit').addClass('has-submitted');
+        $('.contact-form-submit').text('GOT IT!');
+        $('.contact').removeClass('is-visible');
 			},
 			error:function(e) {
 				console.dir(e);
+        $('.contact-form-submit').removeClass('is-submitting');
+        $('.contact-form-submit').addClass('has-errored');
+        $('.contact-form-submit').text('ERROR :(');
 			}
 		});
 	});

@@ -165,7 +165,38 @@ label, input, textarea {
 
 .portfolio {
   background: $dark;
-  height: 20px;
+
+  img {
+    max-width: 100%;
+  }
+
+  a {
+    display: block;
+    width: 100%;
+  }
+}
+
+.shots {
+  @include clearfix;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0;
+  list-style-type: none;
+}
+
+.shots-shot {
+  float: left;
+  margin-bottom: -5px;
+  width: 100%;
+
+  @media screen and (min-width: 400px) {
+    width: 50%;
+  }
+
+  @media screen and (min-width: 800px) {
+    width: 33.333333333%;
+  }
 }
 
 .contact {

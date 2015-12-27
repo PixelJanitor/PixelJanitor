@@ -12,8 +12,8 @@ $(window).on('scroll', function() {
 
   logo.css('opacity', 1 - scrollTop / 350);
   logo.css('bottom', 40 + scrollTop / 4);
-  pixelFlower.css('opacity', 1 - scrollTop / 500);
-  pixelFlower.css('bottom', 0 - scrollTop / 5);
+  // pixelFlower.css('opacity', 1 - scrollTop / 500);
+  // pixelFlower.css('bottom', 0 - scrollTop / 5);
 });
 
 $(window).on('load resize', function() {
@@ -64,4 +64,18 @@ $(document).ready(function() {
 			}
 		});
 	});
+
+  $.jribbble.setToken('d6f7b6484e94bb9ef7a9e8eb051e88b0a4d00ad2d11138ad1cf1b1857f9c6876');
+  $.jribbble.users('pixeljanitor').shots({per_page: 36}).then(function(shots) {
+    var html = [];
+
+    shots.forEach(function(shot) {
+      html.push('<li class="shots-shot">');
+      html.push('<a href="' + shot.html_url + '" target="_blank">');
+      html.push('<img src="' + shot.images.normal + '">');
+      html.push('</a></li>');
+    });
+
+    $('.shots').html(html.join(''));
+  });
 });

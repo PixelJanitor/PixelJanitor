@@ -70,9 +70,14 @@ $(document).ready(function() {
     var html = [];
 
     shots.forEach(function(shot) {
+      var image = shot.images.hidpi;
+      if (image === null) {
+        image = shot.images.normal
+      };
+      console.log(image);
       html.push('<li class="shots-shot">');
       html.push('<a href="' + shot.html_url + '" target="_blank">');
-      html.push('<img src="' + shot.images.normal + '">');
+      html.push('<img src="' + image + '">');
       html.push('</a></li>');
     });
 

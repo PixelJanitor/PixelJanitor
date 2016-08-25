@@ -1,0 +1,21 @@
+.primary-header {
+  display: flex;
+  align-items: flex-end;
+  animation: fade-in 1.5s;
+  height: $header-height;
+  justify-content: space-between;
+}
+
+.logo {
+  @include hide-text;
+  @include size(44px);
+  background: url(img/logo.svg) no-repeat;
+  background-position: center;
+}
+
+.social-links {
+  display: flex;
+  @include size(140px 44px);
+  align-items: center;
+  justify-content: space-between;
+}

@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'sf_monolight';
+    src: url('fonts/sfmono-light-webfont.woff2') format('woff2'),
+         url('fonts/sfmono-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

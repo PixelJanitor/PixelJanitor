@@ -1,0 +1,42 @@
+.hero {
+  background: $dark;
+  color: $white;
+  height: 100vh;
+}
+
+.hero-content {
+  display: flex;
+  height: $hero-height;
+  align-items: center;
+
+  h1 {
+    font-size: calc(100% + .85vw);
+    line-height: 1.5;
+  }
+
+  span {
+    font-family: "sf_monolight", monospace;
+    display: block;
+    opacity: 0;
+
+    @media screen and (max-width: 428px) {
+      margin-bottom: 28px;
+    }
+  }
+}
+
+.prezo-line-1 {
+  animation: fade-down 2s ease-out 1s forwards;
+}
+
+.prezo-line-2 {
+  animation: fade-right 2s ease-out 3.25s forwards;
+}
+
+.prezo-line-3 {
+  animation: fade-up 2s ease-out 5.75s forwards;
+}
+
+.prezo-line-4 {
+  animation: fade-left 2s ease-out 8.25s forwards;
+}

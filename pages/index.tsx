@@ -1,8 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-
-import SVG from 'react-inlinesvg'
 import Div100vh from 'react-div-100vh'
+import SVG from 'react-inlinesvg'
 
 const Home: NextPage = () => {
   return (

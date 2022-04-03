@@ -1,16 +1,51 @@
-html,
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root,
+.light {
+  --white: theme('colors.white');
+  --black: theme('colors.black');
+
+  --gray-050: theme('colors.gray.50');
+  --gray-100: theme('colors.gray.100');
+  --gray-200: theme('colors.gray.200');
+  --gray-300: theme('colors.gray.300');
+  --gray-400: theme('colors.gray.400');
+  --gray-500: theme('colors.gray.500');
+  --gray-600: theme('colors.gray.600');
+  --gray-700: theme('colors.gray.700');
+  --gray-800: theme('colors.gray.800');
+  --gray-850: theme('colors.gray.850');
+  --gray-900: theme('colors.gray.900');
+
+  --bg-primary: var(--white);
+  --bg-secondary: var(--gray-050);
+  --border-primary: var(--gray-100);
+  --border-secondary: var(--gray-200);
+  --text-primary: var(--gray-800);
+  --text-secondary: var(--gray-600);
+  --text-blue: var(--blue-500);
+  --icon-secondary-opacity: 0.5;
+  --icon-tertiary-opacity: 0.3;
+
+  --logo-p: var(--gray-800);
+  --logo-j: var(--gray-200);
+}
+
+.dark {
+  --bg-primary: var(--gray-900);
+  --bg-secondary: var(--gray-850);
+  --border-primary: var(--gray-800);
+  --border-secondary: var(--gray-700);
+  --text-primary: var(--gray-100);
+  --text-secondary: var(--gray-400);
+
+  --logo-p: var(--gray-100);
+  --logo-j: var(--gray-700);
+}
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
+  @apply bg-primary;
+  @apply text-primary;
 }

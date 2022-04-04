@@ -93,7 +93,7 @@ const Home: NextPage = () => {
             <Comment comment='Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet11' />
             <Comment comment='Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet12' />
             <Comment comment='Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet13' />
-            <CommentNew comment='Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet13' />
+            <CommentNew />
           </div>
         </aside>
       </Div100vh>

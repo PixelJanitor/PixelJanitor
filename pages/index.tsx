@@ -20,7 +20,7 @@ const Home: NextPage = () => {
         <aside className='flex w-35 shrink-0 flex-col justify-between p-6 pt-12'>
           <div className='space-y-6'>
             <Link href={'/'}>
-              <a>
+              <a className='inline-flex h-3 align-top'>
                 <SVG src='/images/logo.svg' />
               </a>
             </Link>

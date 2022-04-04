@@ -57,8 +57,10 @@ const Home: NextPage = () => {
         <main className='grow space-y-6 pt-10.5'>
           <section className='text-5xl font-bold'>
             <h1 className=''>Product design</h1>
-            <h2 className=''>Interface design</h2>
             <h2 className=''>Web animation</h2>
+            <h2 className=''>
+              Interface <span className='bg-spectrum bg-clip-text text-transparent'>design</span>
+            </h2>
             <h2 className=''>Design systems</h2>
             <h2 className=''>Frontend engineering</h2>
           </section>

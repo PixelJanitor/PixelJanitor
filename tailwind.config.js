@@ -56,8 +56,14 @@ module.exports = {
       orange: {
         500: '#ee8f3e'
       },
+      green: {
+        500: '#6ec769'
+      },
       blue: {
         500: '#4c90e7'
+      },
+      purple: {
+        500: '#5b73f1'
       }
     },
     fontFamily: {
@@ -177,6 +183,10 @@ module.exports = {
         primary: 'var(--bg-primary)',
         secondary: 'var(--bg-secondary)',
         tertiary: 'var(--bg-tertiary)'
+      },
+      backgroundImage: {
+        spectrum:
+          'linear-gradient(135deg, var(--orange-500) 0%, var(--red-500) 25%, var(--purple-500) 50%, var(--blue-500) 75%, var(--green-500) 100%)'
       },
       opacity: opacity(),
       spacing: spacing(),

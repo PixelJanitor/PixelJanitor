@@ -19,13 +19,27 @@
   --gray-850: theme('colors.gray.850');
   --gray-900: theme('colors.gray.900');
 
+  --red-500: theme('colors.red.500');
+
+  --orange-500: theme('colors.orange.500');
+
+  --blue-500: theme('colors.blue.500');
+
   --bg-primary: var(--white);
-  --bg-secondary: var(--gray-050);
+  --bg-secondary: var(--gray-100);
+  --bg-tertiary: var(--gray-050);
+
   --border-primary: var(--gray-100);
   --border-secondary: var(--gray-200);
+
+  --text-light: var(--gray-100);
+  --text-dark: var(--gray-800);
   --text-primary: var(--gray-800);
-  --text-secondary: var(--gray-600);
+  --text-secondary: var(--gray-500);
+  --text-red: var(--red-500);
+  --text-orange: var(--orange-500);
   --text-blue: var(--blue-500);
+
   --icon-secondary-opacity: 0.5;
   --icon-tertiary-opacity: 0.3;
 
@@ -35,17 +49,42 @@
 
 .dark {
   --bg-primary: var(--gray-900);
-  --bg-secondary: var(--gray-850);
+  --bg-secondary: var(--gray-800);
+  --bg-tertiary: var(--gray-850);
+
   --border-primary: var(--gray-800);
   --border-secondary: var(--gray-700);
+
   --text-primary: var(--gray-100);
-  --text-secondary: var(--gray-400);
+  --text-secondary: var(--gray-600);
 
   --logo-p: var(--gray-100);
   --logo-j: var(--gray-700);
 }
 
-body {
-  @apply bg-primary;
-  @apply text-primary;
+@font-face {
+  font-family: 'Inter var';
+  src: url('/fonts/Inter.var.woff2') format('woff2-variations');
+  font-weight: 400 800;
+  font-style: oblique 0deg 10deg;
+  font-display: swap;
+  font-feature-settings: 'case' 0, 'cpsp' 0, 'dlig' 0, 'frac' 0, 'dnom' 0, 'numr' 0, 'salt' 0, 'subs' 0, 'sups' 0,
+    'tnum' 0, 'zero' 0, 'ss01' 0, 'ss02' 0, 'ss03' 0, 'ss04' 0, 'cv01' 0, 'cv02' 0, 'cv03', 'cv04', 'cv05', 'cv06' 0,
+    'cv07' 0, 'cv08' 0, 'cv09' 0, 'cv10' 0, 'cv11' 0, 'calt', 'ccmp', 'kern';
+}
+
+@font-face {
+  font-family: 'Roboto Mono';
+  src: url('/fonts/RobotoMono.var.woff2') format('woff2-variations');
+  font-weight: 400 500;
+  font-display: swap;
+}
+
+@supports (font-variation-settings: normal) {
+  i,
+  em,
+  .italic {
+    font-style: normal;
+    font-variation-settings: 'slnt' -10;
+  }
 }

@@ -11,7 +11,7 @@ const Comment: React.FC<Props> = ({ comment }) => {
 
   return (
     <div className='flex space-x-1.5'>
-      <div className='h-5.5 w-5.5 shrink-0 overflow-hidden rounded-lg bg-gray-800'>
+      <div className='h-5.5 w-5.5 shrink-0 transform-gpu overflow-hidden rounded-lg bg-gray-800'>
         <Image
           src={'https://pbs.twimg.com/profile_images/1435900467729637381/C7lu0Qyz_x96.jpg'}
           width={88}
@@ -19,7 +19,7 @@ const Comment: React.FC<Props> = ({ comment }) => {
         />
       </div>
       <div className='grow space-y-1'>
-        <div className='relative grow overflow-hidden rounded-xl rounded-br-xs shadow-xl shadow-black/25'>
+        <div className='relative grow transform-gpu overflow-hidden rounded-xl rounded-br-xs shadow-xl shadow-black/25'>
           <div className='relative z-10 bg-gray-900/80 px-2 py-1.5 text-xs text-light'>{comment}</div>
           <div
             style={{

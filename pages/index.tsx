@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -57,9 +58,11 @@ const Home: NextPage = () => {
         <main className='grow space-y-6 pt-10.5'>
           <section className='text-5xl font-bold'>
             <h1 className=''>Product design</h1>
-            <h2 className=''>Web animation</h2>
             <h2 className=''>
               Interface <span className='bg-spectrum bg-clip-text text-transparent'>design</span>
+            </h2>
+            <h2 className=''>
+              Web <AnimatedAnimationText />
             </h2>
             <h2 className=''>Design systems</h2>
             <h2 className=''>Frontend engineering</h2>
@@ -100,6 +103,57 @@ const Home: NextPage = () => {
         </aside>
       </Div100vh>
     </>
+  )
+}
+
+const AnimatedAnimationText = () => {
+  const wrapper = {
+    text: {
+      transition: {
+        staggerChildren: 0.05
+      }
+    }
+  }
+
+  const letter = {
+    text: {
+      scaleY: [1, 1.2, 1],
+      transition: {
+        duration: 0.3
+      }
+    }
+  }
+
+  return (
+    <motion.span variants={wrapper} animate='text' className='inline-flex origin-bottom'>
+      <motion.span className='origin-bottom' variants={letter}>
+        a
+      </motion.span>
+      <motion.span className='origin-bottom' variants={letter}>
+        n
+      </motion.span>
+      <motion.span className='origin-bottom' variants={letter}>
+        i
+      </motion.span>
+      <motion.span className='origin-bottom' variants={letter}>
+        m
+      </motion.span>
+      <motion.span className='origin-bottom' variants={letter}>
+        a
+      </motion.span>
+      <motion.span className='origin-bottom' variants={letter}>
+        t
+      </motion.span>
+      <motion.span className='origin-bottom' variants={letter}>
+        i
+      </motion.span>
+      <motion.span className='origin-bottom' variants={letter}>
+        o
+      </motion.span>
+      <motion.span className='origin-bottom' variants={letter}>
+        n
+      </motion.span>
+    </motion.span>
   )
 }
 

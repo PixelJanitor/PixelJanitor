@@ -3,7 +3,7 @@ import CommentNew from '@/components/CommentNew'
 
 const CommentSideBar: React.FC = () => {
   return (
-    <aside className='flex w-45 flex-col-reverse overflow-auto'>
+    <aside className='flex w-45 shrink-0 flex-col-reverse overflow-auto'>
       <div className='space-y-3 p-3 pl-0'>
         <Comment comment='Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet1' />
         <Comment comment='Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet2' />

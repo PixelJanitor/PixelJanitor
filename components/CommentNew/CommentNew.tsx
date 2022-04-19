@@ -12,7 +12,7 @@ const CommentNew: React.FC = () => {
 
   return (
     <div className='flex space-x-1.5'>
-      <div className='h-5.5 w-5.5 shrink-0 overflow-hidden rounded-lg bg-gray-800'>
+      <div className='h-5.5 w-5.5 shrink-0 transform-gpu overflow-hidden rounded-lg bg-gray-800'>
         <Image src={bgImage} width={88} height={88} />
       </div>
       <div className='grow space-y-1'>

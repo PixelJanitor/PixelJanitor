@@ -1,7 +1,11 @@
+import cn from 'classnames'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import SVG from 'react-inlinesvg'
 
 const SideNav: React.FC = () => {
+  const router = useRouter()
+
   return (
     <aside className='flex w-35 shrink-0 flex-col justify-between p-6 pt-12'>
       <div className='space-y-6'>
@@ -13,7 +17,14 @@ const SideNav: React.FC = () => {
 
         <nav className='flex flex-col space-y-2 text-secondary'>
           <Link href={'/is/writing'}>
-            <a className='transition hover:text-primary'>Writing</a>
+            <a
+              className={cn(
+                'transition hover:text-primary',
+                router.pathname === '/is/writing' && 'font-semibold text-primary'
+              )}
+            >
+              Writing
+            </a>
           </Link>
           <Link href={'/is/coding'}>
             <a className='transition hover:text-primary'>Coding</a>

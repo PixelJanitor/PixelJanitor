@@ -10,8 +10,8 @@ const Button: React.FC<Props> = ({ children, handleClick, transparent }) => {
     <button
       onClick={handleClick}
       className={cn(
-        'h-4 rounded bg-secondary px-2 text-sm font-semibold text-primary',
-        transparent ? 'bg-white/5 backdrop-blur' : 'bg-primary'
+        'h-4 rounded bg-secondary px-2 text-sm font-semibold text-light',
+        transparent ? 'bg-white/10 backdrop-blur dark:bg-white/5' : 'bg-primary'
       )}
     >
       {children}

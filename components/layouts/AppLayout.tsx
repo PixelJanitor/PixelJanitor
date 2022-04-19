@@ -24,7 +24,7 @@ const AppLayout: React.FC = ({ children }) => {
       </Div100vh>
 
       {isArticleVisible && (
-        <div className='fixed inset-0 flex flex-col space-y-1 bg-black/50 p-1 backdrop-blur'>
+        <div className='fixed inset-0 flex flex-col space-y-1 bg-black/85 p-1 backdrop-blur dark:bg-black/50'>
           <div className='flex justify-between'>
             <div className='flex space-x-1'>
               <Button handleClick={close} transparent>

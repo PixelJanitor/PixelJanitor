@@ -10,9 +10,7 @@ const Writing: NextPage = () => {
       </Head>
 
       <section className='space-y-6'>
-        <div className='text-5xl font-bold'>
-          <h1>Writing</h1>
-        </div>
+        <div className='text-5xl font-bold'></div>
 
         <p className='text-lg'>This is the blog page</p>
       </section>

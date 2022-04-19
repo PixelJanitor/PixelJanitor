@@ -30,19 +30,13 @@ const Post: React.FC<Props> = ({ close }) => {
           </a>
         </footer>
       </aside>
-      <div className='text-5x grow overflow-auto pt-10.5 pr-12'>
-        asdfa lkajs dflkajs dflkasj flaskdjf ;laskdfj ;laskdfj l;askd fjl;askdjf l;askdj fl;askdfj l;skadjf lsdkjf
-        sakdjfh adsklfh lkjfh sdfkjh sflkjsflkjahsf kjasfh lkajsfh alksjfh salkfjh askfljhs flkjashf kljashf lskaj
-        hasdfa lkajs dflkajs dflkasj flaskdjf ;laskdfj ;laskdfj l;askd fjl;askdjf l;askdj fl;askdfj l;skadjf lsdkjf
-        sakdjfh adsklfh lkjfh sdfkjh sflkjsflkjahsf kjasfh lkajsfh alksjfh salkfjh askfljhs flkjashf kljashf lskaj
-        hasdfa lkajs dflkajs dflkasj flaskdjf ;laskdfj ;laskdfj l;askd fjl;askdjf l;askdj fl;askdfj l;skadjf lsdkjf
-        sakdjfh adsklfh lkjfh sdfkjh sflkjsflkjahsf kjasfh lkajsfh alksjfh salkfjh askfljhs flkjashf kljashf lskaj
-        hasdfa lkajs dflkajs dflkasj flaskdjf ;laskdfj ;laskdfj l;askd fjl;askdjf l;askdj fl;askdfj l;skadjf lsdkjf
-        sakdjfh adsklfh lkjfh sdfkjh sflkjsflkjahsf kjasfh lkajsfh alksjfh salkfjh askfljhs flkjashf kljashf lskaj
-        hasdfa lkajs dflkajs dflkasj flaskdjf ;laskdfj ;laskdfj l;askd fjl;askdjf l;askdj fl;askdfj l;skadjf lsdkjf
-        sakdjfh adsklfh lkjfh sdfkjh sflkjsflkjahsf kjasfh lkajsfh alksjfh salkfjh askfljhs flkjashf kljashf lskaj
-        hasdfa lkajs dflkajs dflkasj flaskdjf ;laskdfj ;laskdfj l;askd fjl;askdjf l;askdj fl;askdfj l;skadjf lsdkjf
-        sakdjfh adsklfh lkjfh sdfkjh sflkjsflkjahsf kjasfh lkajsfh alksjfh salkfjh askfljhs flkjashf kljashf lskaj h
+      <div className='grow overflow-auto pt-10.5 pr-12'>
+        <h1 className='text-5xl font-bold'>Storytelling with react Framer motion</h1>
+        <p className='mt-6'>
+          I’m Derek, and making things is what gets me out of bed (and keeps me up at night). I don’t just make digital
+          things, but tangible stuff too. If you want me to make something for you - reach out. I’m currently at
+          PlanetScale designing and building the best database product ever.
+        </p>
       </div>
       <CommentSideBar />
     </div>

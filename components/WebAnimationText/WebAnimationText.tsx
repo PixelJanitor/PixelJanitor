@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 
-const AnimatedAnimationText: React.FC = () => {
-  const wrapper = {
+const WebAnimationText: React.FC = () => {
+  const wordWrapper = {
     text: {
       transition: {
         staggerChildren: 0.05
@@ -19,7 +19,8 @@ const AnimatedAnimationText: React.FC = () => {
   }
 
   return (
-    <motion.span variants={wrapper} animate='text' className='inline-flex origin-bottom'>
+    <motion.span variants={wordWrapper} whileHover='text' className='inline-flex origin-bottom'>
+      Web&nbsp;
       <motion.span className='origin-bottom' variants={letter}>
         a
       </motion.span>
@@ -51,4 +52,4 @@ const AnimatedAnimationText: React.FC = () => {
   )
 }
 
-export default AnimatedAnimationText
+export default WebAnimationText

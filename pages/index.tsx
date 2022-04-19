@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 
-import AnimatedAnimationText from '@/components/AnimatedAnimationText'
+import WebAnimationText from '@/components/WebAnimationText'
 
 const Home: NextPage = () => {
   return (
@@ -13,13 +13,13 @@ const Home: NextPage = () => {
       </Head>
 
       <section className='space-y-6'>
-        <div className='text-5xl font-bold'>
+        <div className='cursor-default text-5xl font-bold'>
           <h1>Product design</h1>
           <h2>
             Interface <span className='bg-spectrum bg-clip-text text-transparent'>design</span>
           </h2>
           <h2>
-            Web <AnimatedAnimationText />
+            <WebAnimationText />
           </h2>
           <h2>Design systems</h2>
           <h2>Frontend engineering</h2>

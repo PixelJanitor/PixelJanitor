@@ -14,15 +14,15 @@ const Home: NextPage = () => {
 
       <section className='space-y-6'>
         <div className='text-5xl font-bold'>
-          <h1 className=''>Product design</h1>
-          <h2 className=''>
+          <h1>Product design</h1>
+          <h2>
             Interface <span className='bg-spectrum bg-clip-text text-transparent'>design</span>
           </h2>
-          <h2 className=''>
+          <h2>
             Web <AnimatedAnimationText />
           </h2>
-          <h2 className=''>Design systems</h2>
-          <h2 className=''>Frontend engineering</h2>
+          <h2>Design systems</h2>
+          <h2>Frontend engineering</h2>
         </div>
 
         <h3 className='text-2xl'>
